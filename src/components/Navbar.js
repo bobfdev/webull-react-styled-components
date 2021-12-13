@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
+// the /macro for 'styled-components' is for adding the inline css on the Button css={`color:`}
 import styled from 'styled-components';
 import logo from '../assets/logo.svg';
-
 
 const NavbarContainer = styled.div`
     width: 100%;
@@ -53,9 +53,35 @@ const SearchWrap = styled.div`
     padding-left: 37px;
     border-radius: 19px;
 `;
-const Input = styled.input``;
-const ButtonContainer = styled.div``;
-const Button = styled.div``;
+const Input = styled.input`
+    color: #000;
+    width: 196px;
+    border: transparent;
+    font-size: 12px;
+    background: transparent;
+    outline: none;
+
+    &::placeholder {
+        color: #d1d8de;
+    }
+`;
+const ButtonContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+`;
+const Button = styled.div`
+    width: 110px;
+    color: #fff;
+    cursor: pointer;
+    height: 36px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #007cff;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 12px;
+`;
 
 function Navbar() {
     return (
@@ -76,7 +102,12 @@ function Navbar() {
                     </SearchWrap>
                 </Search>
                 <ButtonContainer>
-                    <Button>SIGN UP</Button>
+                    <Button css={`
+                        color: #037cff;
+                        background: #fff;     
+                    `}>
+                        SIGN UP
+                    </Button>
                     <Button>LOG IN</Button>
                 </ButtonContainer>
             </NavbarWrap>

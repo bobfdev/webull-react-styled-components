@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import home from '../assets/home.png';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Section = styled.section`
     background-image: url(${home});
@@ -64,6 +65,7 @@ function Home() {
                         {/* target='_blank' means it will open up in a new tab */}
                         <Button href='' target='_blank'>
                             <span>Claim your free stocks now</span>
+                            <MdKeyboardArrowRight />
                         </Button>
                 </Left>
             </Content> 

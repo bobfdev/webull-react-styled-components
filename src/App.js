@@ -1,12 +1,14 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import GlobalStyle from "./globalStyles";
 
 function App() {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <Navbar />
       <Home />
-    </div>
+    </>
   );
 }
 
